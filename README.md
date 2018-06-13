@@ -33,8 +33,9 @@ This directory contains a simple IBM Cloud Function in Java, HL7Parser, that use
 }
 
 ## 1. Register the JAVA cloud function called hl7parser inside your IBM Cloud org and space using the IBM Cloud CLI
-bx wsk action create hl7parser hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
-Now you can see and invoke the action from the IBM Cloud UI.
+* Run command:
+  bx wsk action create hl7parser hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
+* Now you can see and invoke the action from the IBM Cloud UI.
 
  * IBM Cloud CLI [download](https://console.bluemix.net/docs/cli/reference/bluemix_cli/download_cli.html#download_install)
  * Cloud functions [CLI plug-in](https://console.bluemix.net/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli)
