@@ -47,7 +47,7 @@ public class AppTest
 		
 		objIn.addProperty("hl7input", oruMessage);
 		
-		//System.out.println(objIn.toString());
+		System.out.println(objIn.toString());
 		
 		HL7Parser messageValidator = new HL7Parser();
 		
