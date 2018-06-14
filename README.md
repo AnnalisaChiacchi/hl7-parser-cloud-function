@@ -39,3 +39,4 @@ This directory contains a simple IBM Cloud Function in Java, HL7Parser, that use
 
  * IBM Cloud CLI [download](https://console.bluemix.net/docs/cli/reference/bluemix_cli/download_cli.html#download_install)
  * Cloud functions [CLI plug-in](https://console.bluemix.net/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli)
+ * Licensed under the Apache License, Version 2.0 https://www.apache.org/licenses/LICENSE-2.0
