@@ -45,7 +45,7 @@ public class AppTest
     			
     	JsonObject objIn = new JsonObject();
 		
-		objIn.addProperty("hl7input", oruMessage);
+		objIn.addProperty("hl7", oruMessage);
 		
 		System.out.println(objIn.toString());
 		
@@ -75,7 +75,7 @@ public class AppTest
     			
     	JsonObject objIn = new JsonObject();
 		
-		objIn.addProperty("hl7input", invalidOruMessage);
+		objIn.addProperty("hl7", invalidOruMessage);
 		
 		System.out.println(objIn.toString());
 		
@@ -101,7 +101,7 @@ public class AppTest
     		
 	JsonObject objIn = new JsonObject();
 	
-	objIn.addProperty("hl7input", adtMessage);
+	objIn.addProperty("hl7", adtMessage);
 	
 	System.out.println(objIn.toString());
 	

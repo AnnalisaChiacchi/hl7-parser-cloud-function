@@ -42,7 +42,7 @@ public class MainHL7Validation {
 		
 		JsonObject objIn = new JsonObject();
 		
-		objIn.addProperty("hl7input", oruMessage);
+		objIn.addProperty("hl7", oruMessage);
 		
 		System.out.println(objIn.toString());
 		

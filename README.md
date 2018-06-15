@@ -6,8 +6,9 @@ This directory contains a simple IBM Cloud Function in Java, HL7Parser, that use
  * `JsonObject` The input JSON Object required by IBM Cloud Specifications about Java Cloud Functions and actions. Refer to IBM Cloud documentation for details at this link: https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions.
  * `JsonObject` sample:
  {
-  "hl7input" : "MSH|^~\\&|SQLAB||SMS||201601081056||ORU^R01|34|P|2.2|151760005618||||||^^^^^\r\nPID|000|111|8505059^^^AMC^MR|CCC|ICDTENPONE^TWENTY^^^^^|DDD|19810519|M|EEE|FFF|GGG|HHH|||MMM|NNN|OOO|500084652^^^^^\r\nORC|RE|SO80773465-0|||||^^^201601081054|||||08443^PAUZE, DANIEL K|||||||\r\nOBR||SO80773465-0||LABTYSCR^TYPE + SCREEN (CONVERT)^L^TYSCR^ - ^LN|||201601081054|||||||201601081054|^|08443^PAUZE, DANIEL K||||F16050||||BB|F|TYSCR^TYSCR|^^^^^R|^~^~||||||| - ||||||||\r\nOBX|0|ST|%EXX^CROSSMATCH EXPIRATION^L^%EXX^^LN||01/12/2016||||||F|||||^^^^^^^^^^^|\r\n"
+  "hl7" : "MSH|^~\\&|SQLAB||SMS||201601081056||ORU^R01|34|P|2.2|151760005618||||||^^^^^\r\nPID|000|111|8505059^^^AMC^MR|CCC|ICDTENPONE^TWENTY^^^^^|DDD|19810519|M|EEE|FFF|GGG|HHH|||MMM|NNN|OOO|500084652^^^^^\r\nORC|RE|SO80773465-0|||||^^^201601081054|||||08443^PAUZE, DANIEL K|||||||\r\nOBR||SO80773465-0||LABTYSCR^TYPE + SCREEN (CONVERT)^L^TYSCR^ - ^LN|||201601081054|||||||201601081054|^|08443^PAUZE, DANIEL K||||F16050||||BB|F|TYSCR^TYSCR|^^^^^R|^~^~||||||| - ||||||||\r\nOBX|0|ST|%EXX^CROSSMATCH EXPIRATION^L^%EXX^^LN||01/12/2016||||||F|||||^^^^^^^^^^^|\r\n"
  }
+ * \n is not supported as HL7 segments separator. We use \r instead. 
 
 ## Java class output parameter:
 * `JsonObject` The output JSOn Object required by IBM Cloud Specifications about Java Cloud Functions and actions.Refer to IBM Cloud documentation for details at this link: https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions.
@@ -36,6 +37,7 @@ This directory contains a simple IBM Cloud Function in Java, HL7Parser, that use
 * Run command:
   bx wsk action create hl7parser hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
 * Now you can see and invoke the action from the IBM Cloud UI.
+* Java actions cannot be created with the IBM Cloud UI.
 
  * IBM Cloud CLI [download](https://console.bluemix.net/docs/cli/reference/bluemix_cli/download_cli.html#download_install)
  * Cloud functions [CLI plug-in](https://console.bluemix.net/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli)

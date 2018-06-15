@@ -48,7 +48,7 @@ public class HL7Validation {
 		
 		if ( ! obj.isJsonNull()) {
 		
-			String hl7Message = obj.get("hl7input").getAsString();
+			String hl7Message = obj.get("hl7").getAsString();
 			
 			System.out.println("******START MSG******");
 			System.out.println(hl7Message);
